@@ -9,7 +9,7 @@ def cluster_logs(df):
     df["cluster"] = kmeans.fit_predict(X)
 
     clusters = {}
-    for i in range(3):
+    for i in range(5):
         clusters[f"cluster_{i}"] = df[df["cluster"] == i]["message"].tolist()
 
     return clusters
